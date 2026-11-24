@@ -2,11 +2,16 @@ Free of Charge Credit – Repayment Schedule
 
 A small PHP web app that builds the monthly repayment schedule for a 0% interest loan. You enter the purchase amount, the initial deposit and the number of monthly payments, and the app shows every payment date, the monthly amount and the remaining balance in an HTML table.
 
-Practical work for Back-End Web Programming 2 (CS-024) at UFAZ.
 
 Live demo: https://ilaha.alwaysdata.net/Back-end/index.html
 
-Repayment schedule screenshot
+The form
+
+Web form to enter the loan details
+
+The schedule
+
+Generated repayment schedule
 
 Features
 Web form for the amount, the initial deposit and the number of monthly payments, pre-filled with test values (8699.95 / 1249.90 / 15)
