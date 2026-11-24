@@ -1,0 +1,288 @@
+:root {
+    --wine: #6d1a36;
+    --wine-dark: #4a0f24;
+    --coral: #e8604c;
+    --rose: #f6dfe3;
+    --cream: #fbf7f2;
+    --ink: #2a2328;
+    --muted: #7c6f76;
+    --line: #ecdfe3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Work Sans", Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.5;
+}
+
+h1, h2 {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+}
+
+.banner {
+    background: linear-gradient(135deg, var(--wine-dark), var(--wine) 60%, #8e2a4a);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px 110px;
+}
+
+.banner h1 {
+    font-size: 2.6em;
+    margin: 12px 0 6px;
+}
+
+.banner p {
+    margin: 0;
+    opacity: 0.85;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--coral);
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.card {
+    max-width: 520px;
+    margin: -70px auto 0;
+    background: #fff;
+    padding: 35px 40px;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(74, 15, 36, 0.15);
+}
+
+.card.wide {
+    max-width: 860px;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: var(--wine);
+}
+
+.hint {
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+.field {
+    margin-top: 20px;
+}
+
+.field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.field input {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 1.05em;
+    font-family: inherit;
+    border: 2px solid var(--line);
+    border-radius: 8px;
+    background: #fdfbfa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field input:focus {
+    outline: none;
+    border-color: var(--wine);
+    box-shadow: 0 0 0 4px rgba(109, 26, 54, 0.12);
+}
+
+.field small {
+    display: block;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+button {
+    width: 100%;
+    margin-top: 28px;
+    padding: 14px;
+    font-size: 1.05em;
+    font-family: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--coral);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: #d24c39;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.stat {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+
+.stat .label {
+    display: block;
+    font-size: 0.85em;
+    color: var(--muted);
+}
+
+.stat .value {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--wine);
+}
+
+.stat.highlight {
+    background: var(--wine);
+    border-color: var(--wine);
+}
+
+.stat.highlight .label {
+    color: var(--rose);
+}
+
+.stat.highlight .value {
+    color: #fff;
+}
+
+.period {
+    text-align: center;
+    color: var(--muted);
+    margin: 22px 0;
+}
+
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+}
+
+.schedule th {
+    background: var(--wine);
+    color: #fff;
+    font-weight: 500;
+    text-align: left;
+    padding: 10px 12px;
+}
+
+.schedule th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.schedule th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.schedule td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--line);
+}
+
+.schedule tbody tr:hover {
+    background: var(--rose);
+}
+
+.schedule tr.deposit {
+    background: #fff1ec;
+}
+
+.tag {
+    font-size: 0.75em;
+    background: var(--coral);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 4px;
+}
+
+.bar {
+    display: inline-block;
+    width: 90px;
+    height: 8px;
+    background: var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--coral), var(--wine));
+}
+
+.percent {
+    font-size: 0.85em;
+    color: var(--muted);
+    margin-left: 8px;
+}
+
+.schedule tfoot td {
+    font-weight: 600;
+    color: var(--wine);
+    border-bottom: none;
+    border-top: 2px solid var(--wine);
+}
+
+.errors {
+    color: #b3261e;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 24px;
+    color: var(--wine);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85em;
+    padding: 30px 0;
+}
+
+@media (max-width: 700px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        padding: 25px 20px;
+        margin: -70px 12px 0;
+    }
+}

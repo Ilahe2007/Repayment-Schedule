@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free of charge credit - Repayment schedule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="banner">
+        <span class="badge">0% interest</span>
+        <h1>Free of charge credit</h1>
+        <p>Pay in several monthly instalments, without any extra cost.</p>
+    </header>
+
+    <main class="card">
+        <h2>Your purchase</h2>
+        <p class="hint">Fill in the details below to see your repayment schedule.</p>
+
+        <form action="schedule.php" method="post">
+            <div class="field">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" step="0.01" min="0.01" value="8699.95" required>
+                <small>Total price of the purchase</small>
+            </div>
+
+            <div class="field">
+                <label for="deposit">Initial deposit</label>
+                <input type="number" id="deposit" name="deposit" step="0.01" min="0" value="1249.90" required>
+                <small>Paid on the day of purchase</small>
+            </div>
+
+            <div class="field">
+                <label for="months">Number of monthly payments</label>
+                <input type="number" id="months" name="months" step="1" min="1" value="15" required>
+                <small>How many months to spread the balance over</small>
+            </div>
+
+            <button type="submit">Show my schedule &rarr;</button>
+        </form>
+    </main>
+
+    <footer>Back-End Web Programming 2 &middot; UFAZ</footer>
+</body>
+</html>
